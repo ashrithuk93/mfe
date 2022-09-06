@@ -10,8 +10,8 @@ const generateClassName = createGenerateClassName({
 
 const App = () => {
     return (
-        <BrowserRouter generateClassName={generateClassName}>
-            <StylesProvider>
+        <BrowserRouter>
+            <StylesProvider generateClassName={generateClassName}>
                 <div>
                     <Header />
                     <MarketingApp />
