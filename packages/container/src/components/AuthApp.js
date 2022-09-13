@@ -21,8 +21,7 @@ const AuthApp = ({ onSignIn }) => {
         })
 
         history.listen(onParentNavigation);
-        // 
-        history.listen((location) => { onParentNavigation(location) });
+        // history.listen((location) => { onParentNavigation(location) });
     }, [])
 
     return <div ref={ref} />
