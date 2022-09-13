@@ -14,15 +14,15 @@ const mount = (el, { onNavigate, defaultHistory, initialPath, onSignIn }) => {
 
     ReactDOM.render(<App onSignIn={onSignIn} history={history} />, el);
 
-    return {
-        onParentNavigation ({ pathname: newPathname }) {
-            const pathname = history.location;
+    const onParentNavigation = ({ pathname: newPathname }) => {
+        const pathname = history.location;
 
-            if (pathname !== newPathname) {
-                history.push(newPathname);
-            }
+        if (pathname !== newPathname) {
+            history.push(newPathname);
         }
     }
+
+    return { onParentNavigation }
 }
 
 if (process.env.NODE_ENV === "development") {
