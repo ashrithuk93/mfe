@@ -17,8 +17,8 @@ const MarketingApp = () => {
             }
         })
 
-        history.listen(onParentNavigation);
-        // history.listen((location) => { onParentNavigation(location) });
+        // history.listen(onParentNavigation);
+        history.listen((location) => { onParentNavigation(location) });
     }, [])
 
     return <div ref={ref} />
